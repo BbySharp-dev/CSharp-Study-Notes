@@ -1,104 +1,120 @@
-# 📘 Value Types trong C# – Tài liệu ôn tập phỏng vấn
+# 📘 C# Interview Preparation – Value Types (Dễ, Trung Bình, Nâng Cao & Câu Hỏi Giải Quyết Vấn Đề)
 
 ## 1️⃣ Tổng quan về Value Types
 
-**Value Types** là những kiểu dữ liệu lưu trữ giá trị trực tiếp trên **stack**. Khi bạn tạo một biến **value type**, giá trị thực của biến sẽ được lưu trữ trực tiếp. Một số **Value Types** phổ biến trong C# bao gồm: `int`, `double`, `char`, `bool`, `struct`, `enum`. Các **value types** có tốc độ truy cập nhanh và phù hợp với dữ liệu nhỏ.
-
-- **Nullable types**: C# hỗ trợ **nullable types** để cho phép các **value types** có thể chứa giá trị `null`. Điều này giúp xử lý các giá trị chưa xác định trong các biến kiểu giá trị.
+**Value Types** là kiểu dữ liệu trong C# mà giá trị của nó được lưu trữ trực tiếp trên **stack**. Các kiểu dữ liệu này bao gồm: `int`, `double`, `bool`, `char`, `struct`, và `enum`. Đặc điểm chính của value types là chúng lưu trữ giá trị trực tiếp chứ không phải lưu trữ tham chiếu đến bộ nhớ như **reference types**.
 
 ---
 
-## 2️⃣ Câu hỏi phỏng vấn về Value Types
+## 2️⃣ Câu hỏi phỏng vấn cơ bản về Value Types
 
 ### Câu hỏi 1: Value Type là gì trong C#?
 
-**Khái niệm**:  
-**Value Type** là kiểu dữ liệu lưu trữ trực tiếp giá trị trong bộ nhớ **stack**. Khi được tạo, biến kiểu này sẽ chứa giá trị thực chứ không phải tham chiếu tới địa chỉ bộ nhớ như với **reference types**.
+**Mục tiêu**: Hiểu khái niệm cơ bản về value type.
+
+- **Gợi ý trả lời**: Value Type là kiểu lưu trữ giá trị trực tiếp trong biến và trên stack, không tham chiếu đến địa chỉ bộ nhớ khác.
 
 ---
 
-### Câu hỏi 2: Sự khác nhau giữa Value Type và Reference Type là gì?
+### Câu hỏi 2: Các kiểu dữ liệu nào là Value Types trong C#?
 
-**Khái niệm**:
+**Mục tiêu**: Kiểm tra kiến thức về các kiểu dữ liệu.
 
-- **Value Type** lưu trữ giá trị trực tiếp, trong khi **Reference Type** lưu trữ tham chiếu đến địa chỉ của giá trị trong **heap**.
-- **Value Types** có mặt trên **stack**, còn **Reference Types** được lưu trên **heap**, và có thể trỏ đến giá trị hoặc `null`.
-
----
-
-### Câu hỏi 3: Các kiểu dữ liệu nào là Value Types trong C#?
-
-**Khái niệm**:  
-Một số **Value Types** phổ biến trong C# là:
-
-- **int**: Số nguyên
-- **double**: Số thực
-- **char**: Ký tự Unicode
-- **bool**: Giá trị logic (`true` hoặc `false`)
-- **enum**: Tập hợp các hằng số
-- **struct**: Cấu trúc dữ liệu chứa nhiều thành phần khác nhau
+- **Gợi ý trả lời**: Bao gồm `int`, `double`, `char`, `bool`, `struct`, `enum`.
 
 ---
 
-### Câu hỏi 4: Boxing và Unboxing là gì?
+### Câu hỏi 3: Sự khác biệt giữa Value Type và Reference Type là gì?
 
-**Khái niệm**:
+**Mục tiêu**: Đánh giá sự hiểu biết về sự khác nhau giữa hai kiểu dữ liệu.
 
-- **Boxing** là quá trình chuyển một **value type** thành **reference type** bằng cách đóng gói giá trị trong một đối tượng `object`.
-- **Unboxing** là quá trình chuyển đổi ngược lại từ **reference type** sang **value type**.
-
----
-
-### Câu hỏi 5: Nullable Types là gì? Sử dụng ra sao?
-
-**Khái niệm**:  
-**Nullable Types** cho phép một **value type** chứa giá trị `null`. Cú pháp thêm dấu `?` vào sau kiểu dữ liệu để khai báo, ví dụ: `int?`, `double?`.
+- **Gợi ý trả lời**: Value Types lưu trữ giá trị trực tiếp, trong khi Reference Types lưu trữ tham chiếu đến địa chỉ bộ nhớ trong heap.
 
 ---
 
-### Câu hỏi 6: Sự khác biệt giữa `const` và `readonly` trong C#?
+## 3️⃣ Câu hỏi phỏng vấn trung bình về Value Types
 
-**Khái niệm**:
+### Câu hỏi 4: Boxing và Unboxing là gì? Tại sao cần chú ý đến hiệu năng?
 
-- **const**: Giá trị phải được xác định tại thời điểm biên dịch và không thể thay đổi sau đó.
-- **readonly**: Có thể khởi tạo trong constructor và không thể thay đổi sau đó, tuy nhiên có thể được gán giá trị tại runtime.
+**Mục tiêu**: Hiểu về boxing và unboxing và tác động của nó đến hiệu năng.
 
----
-
-### Câu hỏi 7: Enum là gì và khi nào sử dụng?
-
-**Khái niệm**:  
-**Enum** là một kiểu dữ liệu có tập hợp các hằng số, giúp mã dễ đọc hơn và giảm thiểu việc sử dụng các số "magic numbers". **Enum** thường được sử dụng khi cần định nghĩa một tập hợp giá trị cố định.
+- **Gợi ý trả lời**: Boxing là quá trình chuyển value type thành reference type, unboxing là chuyển ngược lại. Cả hai đều có chi phí hiệu năng.
 
 ---
 
-### Câu hỏi 8: Struct là gì? Khác gì so với class?
+### Câu hỏi 5: Enum là gì và tại sao nên sử dụng nó?
 
-**Khái niệm**:  
-**Struct** là một kiểu dữ liệu giá trị dùng để nhóm các thuộc tính có liên quan. **Struct** khác với **class** ở chỗ nó không hỗ trợ kế thừa, và các **struct** thường được dùng khi cần tạo ra các đối tượng nhẹ, không thay đổi nhiều.
+**Mục tiêu**: Kiểm tra khả năng sử dụng enum.
 
----
-
-### Câu hỏi 9: Type Inference là gì? Vai trò của `var` là gì?
-
-**Khái niệm**:  
-**Type inference** là cơ chế của trình biên dịch tự động suy luận kiểu dữ liệu dựa trên giá trị được gán. Từ khóa `var` giúp mã ngắn gọn hơn mà không làm mất đi sự rõ ràng, vì trình biên dịch vẫn xác định chính xác kiểu dữ liệu.
+- **Gợi ý trả lời**: Enum là tập hợp các hằng số, giúp mã dễ đọc và bảo trì hơn.
 
 ---
 
-### Câu hỏi 10: Khi nào nên sử dụng Boxing và Unboxing?
+### Câu hỏi 6: Sự khác nhau giữa `const` và `readonly`?
 
-**Khái niệm**:  
-**Boxing** và **Unboxing** được sử dụng khi cần chuyển đổi giữa **value type** và **reference type**, nhưng nên hạn chế sử dụng trong các ứng dụng yêu cầu hiệu suất cao do chi phí tài nguyên.
+**Mục tiêu**: Hiểu về cách sử dụng `const` và `readonly`.
+
+- **Gợi ý trả lời**: `const` chỉ định giá trị hằng tại thời điểm biên dịch, `readonly` chỉ có thể gán trong constructor hoặc tại thời điểm khởi tạo.
 
 ---
 
-## 3️⃣ Các lưu ý quan trọng
+## 4️⃣ Câu hỏi phỏng vấn nâng cao về Value Types
 
-- **Value Types** lưu trữ giá trị trực tiếp, ngược với **Reference Types** lưu trữ tham chiếu.
-- **Nullable Types** cung cấp khả năng xử lý giá trị `null` cho **Value Types**.
-- **Boxing** và **Unboxing** có thể ảnh hưởng đến hiệu năng nếu sử dụng không đúng cách.
-- **Struct** thường được dùng cho các giá trị nhẹ, ít thay đổi và không yêu cầu tính năng như kế thừa.
+### Câu hỏi 7: Tác động của Boxing và Unboxing đến bộ nhớ và hiệu năng?
+
+**Mục tiêu**: Đánh giá kiến thức về hiệu suất.
+
+- **Gợi ý trả lời**: Boxing/Unboxing yêu cầu thêm thao tác chuyển đổi và lưu trữ trên heap, dẫn đến tiêu tốn bộ nhớ và giảm hiệu năng.
+
+---
+
+### Câu hỏi 8: Khi nào nên sử dụng Struct thay vì Class?
+
+**Mục tiêu**: Kiểm tra khả năng phân biệt khi nào sử dụng struct hoặc class.
+
+- **Gợi ý trả lời**: Sử dụng struct khi cần lưu trữ các giá trị nhỏ, không thay đổi nhiều. Sử dụng class khi cần tính năng mạnh hơn như kế thừa hoặc đa hình.
+
+---
+
+### Câu hỏi 9: Tại sao phải sử dụng nullable types?
+
+**Mục tiêu**: Đánh giá khả năng hiểu và sử dụng nullable types.
+
+- **Gợi ý trả lời**: Nullable types cho phép các value types như `int`, `double` có thể nhận giá trị `null`, giúp xử lý các trường hợp dữ liệu không xác định.
+
+---
+
+## 5️⃣ Câu hỏi giải quyết vấn đề
+
+### Câu hỏi 10: Bạn sẽ giải quyết như thế nào khi gặp vấn đề về hiệu năng do sử dụng quá nhiều Boxing/Unboxing?
+
+**Mục tiêu**: Kiểm tra khả năng giải quyết vấn đề về hiệu năng trong C#.
+
+- **Gợi ý trả lời**: Giảm thiểu boxing/unboxing bằng cách sử dụng Generics, giúp tránh việc chuyển đổi giữa value types và reference types.
+
+---
+
+### Câu hỏi 11: Bạn sẽ xử lý như thế nào nếu cần lưu trữ giá trị `null` cho một tập hợp số nguyên?
+
+**Mục tiêu**: Kiểm tra khả năng sử dụng nullable types.
+
+- **Gợi ý trả lời**: Sử dụng `int?` hoặc `nullable<int>` để lưu trữ các giá trị có thể `null`.
+
+---
+
+### Câu hỏi 12: Nếu cần lưu trữ tập hợp các giá trị số và chuỗi trong C#, bạn sẽ chọn struct hay class? Tại sao?
+
+**Mục tiêu**: Kiểm tra khả năng lựa chọn struct hoặc class dựa trên yêu cầu.
+
+- **Gợi ý trả lời**: Sử dụng struct nếu dữ liệu nhỏ và ít thay đổi, sử dụng class nếu dữ liệu phức tạp và có nhiều thay đổi.
+
+---
+
+### Câu hỏi 13: Trong một ứng dụng lớn, khi nào bạn cần sử dụng Boxing và Unboxing?
+
+**Mục tiêu**: Đánh giá khả năng sử dụng Boxing và Unboxing đúng hoàn cảnh.
+
+- **Gợi ý trả lời**: Sử dụng khi cần tương tác với các thư viện hoặc framework yêu cầu dữ liệu dạng object, nhưng nên hạn chế để tối ưu hiệu năng.
 
 ---
 
