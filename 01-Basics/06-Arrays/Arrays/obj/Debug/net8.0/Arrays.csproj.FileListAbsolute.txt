@@ -1,0 +1,15 @@
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/bin/Debug/net8.0/Arrays
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/bin/Debug/net8.0/Arrays.deps.json
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/bin/Debug/net8.0/Arrays.runtimeconfig.json
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/bin/Debug/net8.0/Arrays.dll
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/bin/Debug/net8.0/Arrays.pdb
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.GeneratedMSBuildEditorConfig.editorconfig
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.AssemblyInfoInputs.cache
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.AssemblyInfo.cs
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.csproj.CoreCompileInputs.cache
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.sourcelink.json
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.dll
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/refint/Arrays.dll
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.pdb
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/Arrays.genruntimeconfig.cache
+/Users/roots/Cybersoft(.NET)/CSharp-Study-Notes/01-Basics/06-Arrays/Arrays/obj/Debug/net8.0/ref/Arrays.dll
